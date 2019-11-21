@@ -1,5 +1,6 @@
 var xToby = 225;
 var yToby = 5;
+var valSnelheid = 2;
 
 function setup() {
   canvas = createCanvas(450,450);
@@ -8,8 +9,36 @@ function setup() {
 
 function draw() {
   background('slategrey');
-  tekenObstakel();
-  tekenToby(xToby,yToby);
+  
+  yToby += valSnelheid;
+  
+  
+  if (yToby >= 450 - 150)
+  {
+      background('lightgreen');
+      noLoop();
+    }
+
+    if (keyIsDown(LEFT_ARROW))
+    {
+        xToby -= 5;
+    }
+    if (keyIsDown(RIGHT_ARROW))
+    {
+        xToby += 5;
+    }
+    if (yToby > 450 - 150 - 30)
+    {
+        if (xToby < 0 + 180 || xToby > 450 - 250)
+        {
+            background('red');
+            noLoop();
+        }
+    }
+    xToby = constrain(xToby, 0 + 70, 450 - 70);
+
+    tekenObstakel();
+    tekenToby(xToby,yToby);
 }
 
 function tekenToby(x,y) {

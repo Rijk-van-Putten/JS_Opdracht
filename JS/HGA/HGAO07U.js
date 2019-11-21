@@ -12,12 +12,21 @@ function draw() {
 }
 
 function tekenRaster() {
-  push();
-  fill('linen');
-  strokeWeight(5);
-  stroke(255);
-  rect(4*50,1*50,50,50);
-  pop();
+    var x;
+    var y;
+
+    for(x = 0; x < 9; x++)
+    {
+        for(y = 0; y < 9; y ++)
+        {
+            push();
+            fill('linen');
+            strokeWeight(5);
+            stroke(255);
+            rect(4*50,1*50,50,50);
+            pop();
+        }
+    }
 }
 
 function tekenStip(x,y) {
