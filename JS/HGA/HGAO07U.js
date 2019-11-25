@@ -3,37 +3,37 @@ var aantal = 50;
 function setup() {
   canvas = createCanvas(450,450);
   canvas.parent('processing');
-  noLoop();
+    frameRate(5);
 }
 
 function draw() {
-  tekenRaster();
-  tekenStip(4,1);
-}
-
-function tekenRaster() {
-    var x;
-    var y;
-
     for(x = 0; x < 9; x++)
     {
         for(y = 0; y < 9; y ++)
         {
-            push();
-            fill('linen');
-            strokeWeight(5);
-            stroke(255);
-            rect(4*50,1*50,50,50);
-            pop();
+          tekenRaster(x, y);
+            var kans = int(random(1, 5));
+            if (kans == 1)
+                tekenStip(x,y);
         }
     }
+}
+
+function tekenRaster(x, y) {    
+    push();
+    fill('linen');
+    strokeWeight(5);
+    stroke(255);
+    translate((x)*50,(y)*50);
+    rect(0, 0, 50, 50);
+    pop();
 }
 
 function tekenStip(x,y) {
   var str = 15;
   push();
   noStroke();
-  fill('darkgoldenrod');
+  fill(random(255), random(255), random(255));
   translate((x + 0.5)*50,(y + 0.5)*50);
   ellipse(0,0,str*2);
   pop();
