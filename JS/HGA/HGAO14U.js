@@ -72,6 +72,7 @@ class Kanon {
     if (keyCode == 32) {
 
       this.geschoten++;
+      this.kogels.push(new Kogel(this.x + this.l, this.y + this.h /2));
     }
   }  
     
@@ -108,7 +109,18 @@ function draw() {
   k.teken();
   v.beweeg();
   v.teken();
-  
+
+  for(var i = 0; i < k.kogels.length; i++)
+  {
+      k.kogels[i].beweeg();
+      k.kogels[i].teken();
+      if (v.wordtGeraakt(k.kogels[i]) && v.levens == 0)
+      {
+          noLoop();
+      }
+  }
+
+
   text(k.geschoten+'x geschoten',50,50);
 }
 

@@ -24,7 +24,7 @@ function setup() {
 function draw() {
     background(255);
     background(achtergrond);
-    image(animatie[huidigeFrame], flatboyX, 10, flatboyBreedte, flatboyHoogte);
+    image(animatie[huidigeFrame], flatboyX, 100, flatboyBreedte, flatboyHoogte);
     huidigeFrame++;
     huidigeFrame %= aantalFrames;
     flatboyX += 5;
