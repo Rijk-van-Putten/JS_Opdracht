@@ -39,8 +39,11 @@ var raster = {
     this.aantal++;
   },
   
-  controleerRaak(mx,my,k,r) {
-    return false;
+  controleerRadak(mx,my,k,r) {
+    if (mx / 50 == k || my / 50 == r)
+        return true;
+    else
+        return false;
   },
   
   tekenStip(x,y) {

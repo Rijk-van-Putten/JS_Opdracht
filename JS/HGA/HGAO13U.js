@@ -1,14 +1,18 @@
-var speler = {
-  x: 225,
-  y: 60,
-  loopMarge: 35,
-  afstandMiddenTotVoet: 25,
-  snelheid: 10,
-  sx: 0,
-  sy: 0,
-  lr: 8,
-  fr: 6,
-  sprites: sprites,
+class Man 
+{
+  
+    constuctor(x, y, sprites) {
+        this.x = x;
+        this.y = y;
+        this.loopMarge = 25;
+        this.afstandMiddenTotVoet = 25;
+        this.snelheid=  10;
+        this.sx = 0;
+        this.sy = 0;
+        this.lr = 8;
+        this.fr = 6;
+        this.sprites = sprites;
+    }
 
   loop() {
     if (keyIsDown(LEFT_ARROW)) {
@@ -31,16 +35,16 @@ var speler = {
     if (this.lr != 8) {
       this.fr = (this.fr + 1) % 8;
     }
-  },
+  }
   
   raakt(b) {
     return false;
-  },
+  }
   
   toon() {
     push();
     imageMode(CENTER);
-    image(sprites[this.lr][this.fr],this.x,this.y);
+    image(this.sprites[this.lr][this.fr],this.x,this.y);
     fill(0,255,0,0.25);
     stroke(0,255,0,0.75);
     ellipse(this.x,this.y + this.afstandMiddenTotVoet,2*this.loopMarge);   
@@ -95,7 +99,7 @@ function setup() {
   textSize(80);
   textAlign(CENTER,CENTER);
   // baan = new Circuit(75,100);
-  // speler = new Man(225,60,sprites);
+  speler = new Man(225,60,sprites);
 }
 
 function draw() {
