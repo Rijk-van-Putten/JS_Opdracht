@@ -39,8 +39,8 @@ var raster = {
     this.aantal++;
   },
   
-  controleerRadak(mx,my,k,r) {
-    if (mx / 50 == k || my / 50 == r)
+  controleerRaak(mx,my,k,r) {
+    if (Math.round(mx / 50) == k && Math.round(my / 50) == r)
         return true;
     else
         return false;
