@@ -5,26 +5,17 @@ function setup() {
   background('gainsboro');
   angleMode(DEGREES);
   rectMode(CENTER);
-
-  
-    stroke('lemonchiffon')
-    strokeWeight(5);
-    fill('plum');
+  fill('plum');
 }
 
 function draw() {
-    var i;
-    for (i = 0; i < 8; i++) {
-        
-        if (i == 0)
-            translate(30 + 40,100);
-        else
-            translate(80 + 30, 0);
-        
-        push();
-        rotate(i * (90 / 6));
-        
-        rect(0,0,80,80);
-        pop();
-    }
+  translate(30 + 40,100);
+  rect(0,0,80,80);
+  
+  translate(80 + 30,0);
+  rect(0,0,80,80);
+  translate(80 + 30,0);
+  rect(0,0,80,80);
+  translate(80 + 30,0);
+  rect(0,0,80,80);  
 }

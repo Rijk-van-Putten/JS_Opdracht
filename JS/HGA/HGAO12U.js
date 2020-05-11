@@ -40,10 +40,7 @@ var raster = {
   },
   
   controleerRaak(mx,my,k,r) {
-    if (Math.round(mx / 50) == k && Math.round(my / 50) == r)
-        return true;
-    else
-        return false;
+    return false;
   },
   
   tekenStip(x,y) {

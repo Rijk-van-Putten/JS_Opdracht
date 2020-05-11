@@ -160,8 +160,6 @@ class Bluebird {
     ********************************************************** */
 
 
-var canvas;
-canvas;
 var canvasH = 400;
 var canvasB;
 
@@ -175,7 +173,6 @@ function setup() {
 
   canvasB = canvasH * achtergrond.width / achtergrond.height;
   canvas = createCanvas(canvasB,canvasH);
-  canvas = canvas;
   canvas.parent('processing');
   colorMode(RGB,255,255,255,1);
   textFont("Monospace");

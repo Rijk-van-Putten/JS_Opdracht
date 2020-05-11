@@ -84,7 +84,6 @@ function draw() {
   c1.teken();
   c2.beweeg2();
   c2.teken();  
-  //basisTekst = 'key='+key+' keyCode='+keyCode+'\n';
   tekst = basisTekst+'\n';
   if (keyIsDown(LEFT_ARROW)) {
     tekstKleur = 'green';

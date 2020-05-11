@@ -265,11 +265,8 @@ function preload() {
   }  
 }
 
-var canvas;
-
 function setup() {
   canvas = createCanvas(900,600);
-  canvas = canvas;
   canvas.parent('processing');
   colorMode(RGB,255,255,255,1);
   textFont("Monospace");

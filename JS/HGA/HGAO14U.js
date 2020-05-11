@@ -72,7 +72,6 @@ class Kanon {
     if (keyCode == 32) {
 
       this.geschoten++;
-      this.kogels.push(new Kogel(this.x + this.l, this.y + this.h /2));
     }
   }  
     
@@ -111,25 +110,6 @@ function draw() {
   v.teken();
   
   text(k.geschoten+'x geschoten',50,50);
-
-  for(var i = 0; i < k.kogels.length; i++)
-  {
-      if (v.wordtGeraakt(k.kogels[i]) && v.levens == 0)
-      {
-        background('linen');
-        textSize(64);
-        fill('black');
-        text('Je hebt gewonnen!', 100, 300 - 300/2);
-        textSize(32);
-        text('Je hebt ' + k.geschoten +'x geschoten', 100, 300 + 300/2);
-        noLoop();
-        return;
-      }
-      k.kogels[i].beweeg();
-      k.kogels[i].teken();
-  }
-
-
 }
 
 function keyTyped() {

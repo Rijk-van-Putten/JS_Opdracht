@@ -18,7 +18,7 @@ function setup() {
 function draw() {
   background(foto);
   for (var k = 0;k < foto.width;k += raster) {
-    for (r = 0;r < foto.width;r += raster) {
+    for (var r = 0;r < foto.width;r += raster) {
       pixelKleur = foto.get(k,r);
       fill(pixelKleur);
       rect(k,r,raster,raster);

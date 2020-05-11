@@ -10,15 +10,7 @@ function setup() {
 }
 
 function draw() {
-    background(240);
-    var i;
-    for(i = 0; i < stipX.length; i++)
-    {
-        fill(stipY[i],50,150);
-        ellipse(stipX[i], stipY[i],diameter);
-    }
-    stipX.push(mouseX);
-    stipY.push(mouseY);
-    stipX.shift();
-    stipY.shift();
+  background(240);
+  fill(60,50,150);
+  ellipse(60,60,diameter);
 }

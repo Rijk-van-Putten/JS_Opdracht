@@ -132,7 +132,7 @@ class Hitme {
     push();
     textAlign(CENTER,TOP);
     fill(0);
-    text("Welkom bij Hitme!. Speel dit spel met z'n tweeën:\n\nHet kanon LINKS beweegt met q en z en schiet met de spatiebalk.\n\nHij probeert de vijand RECHTS te raken. Deze ontwijkt kogels door met i en m de snelheid te veranderen (ontdek zelf hoe dat werkt!).\n\nKlik om het spel te starten.",0,canvas.height / 4,canvas.width,canvas.height)
+    text("Welkom bij Hitme! Speel dit spel met z'n tweeën:\n\nHet kanon LINKS beweegt met q en z en schiet met de spatiebalk.\n\nHij probeert de vijand RECHTS te raken. Deze ontwijkt kogels door met i en m de snelheid te veranderen (ontdek zelf hoe dat werkt!).\n\nKlik om het spel te starten.",0,canvas.height / 4,canvas.width,canvas.height)
     pop();
   }
 
